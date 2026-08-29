@@ -1,5 +1,350 @@
 [
   {
+    "id": "2e18fef3-0735-4efc-b513-a25d2ae972d7",
+    "timestamp": "2026-08-29T14:55:36.414749+00:00",
+    "input_type": "message",
+    "content": "Your account will be suspended! Verify password now.",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Urgency & Panic Triggers",
+        "severity": "HIGH",
+        "detail": "Urgency language identified: 'suspended', pressuring rapid user compliance."
+      },
+      {
+        "label": "Explicit Credential Harvest Request",
+        "severity": "CRITICAL",
+        "detail": "Explicitly solicits private authentication data: 'password'."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 25,
+      "credential_request": 30
+    },
+    "url_segments": null,
+    "ai_explanation": {
+      "summary": "This message is a dangerous phishing attempt designed to panic you into handing over your login details. It uses false threats of account closure to trick you into acting quickly without thinking.",
+      "detailed_reasoning": "The message was flagged because it uses classic psychological manipulation tactics to force a mistake on your part. Specifically, the phrase 'Your account will be suspended!' creates artificial panic and urgency, pressuring you to comply immediately. Additionally, the instruction to 'Verify password now' is a direct and explicit request for your private authentication data, which legitimate companies will never demand through a sudden message.",
+      "attacker_intent": "The attacker wants to steal your password so they can log into your account, potentially locking you out, stealing your personal information, or using your access for further fraud.",
+      "real_world_comparison": "This is similar to a fake bank fraud alert text message that urges you to click a link and log in to stop an unauthorized transaction."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "17da5952-af1e-4370-87ef-98a04b968fa0",
+    "timestamp": "2026-08-29T14:55:34.299853+00:00",
+    "input_type": "url",
+    "content": "http://secure-login.paypa1-checkpoint.net/verify?token=123",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 94,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Alphanumeric Domain Pattern",
+        "severity": "HIGH",
+        "detail": "Domain incorporates short alphanumeric concatenation ('paypa1-checkpoint'), frequently observed in disposable redirectors and phishing infrastructure."
+      },
+      {
+        "label": "Leetspeak Character Substitution (Paypal)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'paypal.com' ('paypa1-checkpoint' -> 'paypal-checkpoint')."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      },
+      {
+        "label": "Suspicious Query Parameters",
+        "severity": "MEDIUM",
+        "detail": "Contains lengthy or redirection-based URL query parameters typical in session hijacking."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 45,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "secure-login",
+      "domain": "paypa1-checkpoint.net",
+      "path": "/verify",
+      "params": "token=123"
+    },
+    "ai_explanation": {
+      "summary": "The web link you submitted is a fake website designed to look like a legitimate login page by mimicking PayPal. It is unsafe to visit or enter any information there.",
+      "detailed_reasoning": "The web address uses a deceptive trick by replacing the letter 'l' in PayPal with the number '1' inside the domain name 'paypa1-checkpoint.net' to fool visitors into thinking it is official. Additionally, the site tacks on a suspicious verification token query parameter at the end of the URL and completely lacks secure HTTPS encryption, meaning any information you type could be easily intercepted by third parties.",
+      "attacker_intent": "The attacker's goal is to trick you into entering your account credentials on this fake page so they can steal your login information and gain unauthorized access to your account.",
+      "real_world_comparison": "This is a classic 'lookalike domain' attack, similar to a criminal printing counterfeit letterhead that mimics a major bank to trick customers into handing over their keys."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "7c299bfc-d6b8-4c5a-92b7-d55801a3e445",
+    "timestamp": "2026-08-29T14:43:26.379001+00:00",
+    "input_type": "message",
+    "content": "Your account will be suspended! Verify password now.",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Urgency & Panic Triggers",
+        "severity": "HIGH",
+        "detail": "Urgency language identified: 'suspended', pressuring rapid user compliance."
+      },
+      {
+        "label": "Explicit Credential Harvest Request",
+        "severity": "CRITICAL",
+        "detail": "Explicitly solicits private authentication data: 'password'."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 25,
+      "credential_request": 30
+    },
+    "url_segments": null,
+    "ai_explanation": {
+      "summary": "This message is a dangerous phishing attempt designed to panic you into handing over your login details. It uses false threats of account closure to trick you into acting without thinking.",
+      "detailed_reasoning": "The message uses high-pressure tactics by falsely claiming that 'Your account will be suspended!' to create immediate panic and rush your decision-making. Following this artificial emergency, it explicitly commands you to 'Verify password now,' which is a direct demand for your sensitive login credentials. Attackers deliberately construct messages this way to bypass your rational judgment and make you submit your password before you realize it is a scam.",
+      "attacker_intent": "The attacker aims to steal your password so they can log into your account, potentially accessing your personal information, financial data, or using your identity to scam your contacts.",
+      "real_world_comparison": "This mirrors classic fraudulent security alert text messages that pretend to be from banks or tech companies warning you of imminent account lockouts."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "72c5d675-27ae-4922-9a1e-6ce7b662984b",
+    "timestamp": "2026-08-29T14:43:23.981387+00:00",
+    "input_type": "url",
+    "content": "http://secure-login.paypa1-checkpoint.net/verify?token=123",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 94,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Alphanumeric Domain Pattern",
+        "severity": "HIGH",
+        "detail": "Domain incorporates short alphanumeric concatenation ('paypa1-checkpoint'), frequently observed in disposable redirectors and phishing infrastructure."
+      },
+      {
+        "label": "Leetspeak Character Substitution (Paypal)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'paypal.com' ('paypa1-checkpoint' -> 'paypal-checkpoint')."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      },
+      {
+        "label": "Suspicious Query Parameters",
+        "severity": "MEDIUM",
+        "detail": "Contains lengthy or redirection-based URL query parameters typical in session hijacking."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 45,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "secure-login",
+      "domain": "paypa1-checkpoint.net",
+      "path": "/verify",
+      "params": "token=123"
+    },
+    "ai_explanation": {
+      "summary": "The link you received is a fake website designed to look like a legitimate login page, and you should avoid clicking on it.",
+      "detailed_reasoning": "The web address uses a technique called typosquatting by replacing the letter 'l' with the number '1' in the word 'paypa1-checkpoint' to trick you into thinking it is the official PayPal service. Additionally, the domain is paired with an unencrypted HTTP connection instead of a secure HTTPS connection, meaning any information you type could be easily intercepted by third parties. The presence of tracking tokens in the web address further indicates it is built to handle specific targeted redirect sessions rather than functioning as a normal website.",
+      "attacker_intent": "The attacker is likely attempting to capture your login credentials or personal information by luring you to a counterfeit page that mimics a trusted service.",
+      "real_world_comparison": "This is like a fraudster putting a fake storefront sign with a slightly misspelled name over a doorway to trick customers into handing over their house keys."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "6857bf21-fc0a-4846-b96d-8511941ab977",
+    "timestamp": "2026-08-29T09:56:48.553352+00:00",
+    "input_type": "url",
+    "content": "https://chat8p8.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('chat8p'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (chatgpt)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'chat8p8' is deceptively similar to legitimate brand 'chatgpt.com' (Edit distance: 2)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "",
+      "domain": "chat8p8.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The website https://chat8p8.com is a deceptive copycat site designed to trick you into thinking it is the official ChatGPT platform. It scored 82 out of 100, placing it at high risk for credential theft.",
+      "detailed_reasoning": "The web address uses a visual trick known as typosquatting, replacing letters with numbers by using 'chat8p8' instead of the legitimate 'chatgpt.com' with an edit distance of only two characters. Attackers inserted numbers into the alphabetic text to make the web address look genuine at a quick glance. Furthermore, the site uses an encrypted HTTPS connection, which is a tactic scammers use to trick users into trusting a fake login page.",
+      "attacker_intent": "The attacker aims to deceive you into entering your login credentials or personal information by making the fake site look and feel like a trusted service.",
+      "real_world_comparison": "This is similar to a scammer setting up a fake storefront with a slightly misspelled name to trick shoppers into handing over their credit card details."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "ddc192a2-f728-4bee-a579-986aadebb8cc",
+    "timestamp": "2026-08-29T09:56:37.828428+00:00",
+    "input_type": "url",
+    "content": "https\"://chat8p8.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "https\"",
+      "path": "//chat8p8.com",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address https://chat8p8.com was scanned and found to be safe, passing all security checks with a low threat score of 5 out of 100.",
+      "detailed_reasoning": "Our automated analysis evaluated the domain structure, URL patterns, social engineering indicators, and credential harvesting risks for https://chat8p8.com. The site triggered zero detection signals across all heuristic categories, meaning it lacks common warning signs such as deceptive brand lookalikes or hidden redirection paths. Because no malicious elements or suspicious structures were found in the URL, the content was safely categorized as benign.",
+      "attacker_intent": "Since the URL passed all security checks cleanly, there is no indication of malicious intent or an attacker trying to compromise your information at this time.",
+      "real_world_comparison": "This is comparable to visiting a standard, legitimate website that uses a completely normal domain address without any hidden traps."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "d09e197e-1fd8-460a-8206-75d7e0bdf1d8",
+    "timestamp": "2026-08-29T09:56:28.713139+00:00",
+    "input_type": "url",
+    "content": "https\"://chatgp8.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "https\"",
+      "path": "//chatgp8.com",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address https://chatgp8.com is safe to visit and has passed all security checks without raising any red flags.",
+      "detailed_reasoning": "Our security scans reviewed the domain structure and URL patterns of https://chatgp8.com and found no signs of malicious activity. The analysis showed a zero percent risk across all categories, including social engineering and credential harvesting. Although the web address uses a slight variation of a popular brand name, the system confirmed it currently lacks any active deceptive content or malicious code.",
+      "attacker_intent": "Even though this specific link is clean, domains that mimic popular brand names are often registered to trick users into trusting a site that might later host fake login pages.",
+      "real_world_comparison": "This resembles a typo-squatting setup, where attackers register lookalike web addresses to catch traffic from users who misspell official websites."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "5edd9a2b-9ccd-4670-ab8b-9498ebb6fc7a",
+    "timestamp": "2026-08-29T09:56:19.819115+00:00",
+    "input_type": "url",
+    "content": "https\"://chatgpt.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "https\"",
+      "path": "//chatgpt.com",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address https://chatgpt.com was analyzed and found to be completely safe and legitimate. You can visit this link without any worry of security risks.",
+      "detailed_reasoning": "Our security checks evaluated the exact URL provided and found no signs of deception. The domain name matches the official OpenAI platform correctly, without any hidden characters, misspellings, or suspicious extensions designed to fool you. Furthermore, the URL structure follows standard, trusted formatting and triggered zero warnings across all of our heuristic evaluation categories.",
+      "attacker_intent": "Since this URL is entirely legitimate, there is no malicious intent present, and it serves only to direct users to the official ChatGPT service.",
+      "real_world_comparison": "This is equivalent to checking the sign on a trusted storefront and confirming it is the actual business rather than a counterfeit setup."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
     "id": "74f94b35-041d-4f8c-8aba-8e13b239e3ac",
     "timestamp": "2026-08-29T09:42:21.988366+00:00",
     "input_type": "url",

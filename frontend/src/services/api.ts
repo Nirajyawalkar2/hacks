@@ -107,22 +107,45 @@ export function mapBackendToScanItem(data: any): ScanItem {
   }
 }
 
-export async function analyzeThreatAPI(type: "url" | "message", content: string): Promise<ScanItem> {
-  const response = await fetch(`${API_BASE}/api/analyze`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ type, content })
-  })
+import { analyzeLocally } from "@/lib/localThreatEngine"
 
-  if (!response.ok) {
-    throw new Error(`Analysis failed with status ${response.status}`)
+export async function analyzeThreatAPI(type: "url" | "message", content: string): Promise<ScanItem> {
+  // If no backend URL configured (e.g. static production deployment on Vercel), use client engine directly
+  if (!API_BASE) {
+    return analyzeLocally(type, content)
   }
 
-  const json = await response.json()
-  return mapBackendToScanItem(json)
+  try {
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 6000)
+
+    const response = await fetch(`${API_BASE}/api/analyze`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ type, content }),
+      signal: controller.signal
+    })
+    clearTimeout(timeoutId)
+
+    if (!response.ok) {
+      throw new Error(`Analysis failed with status ${response.status}`)
+    }
+
+    const contentType = response.headers.get("content-type") || ""
+    if (!contentType.includes("application/json")) {
+      throw new Error("Response is not JSON (likely frontend SPA rewrite)")
+    }
+
+    const json = await response.json()
+    return mapBackendToScanItem(json)
+  } catch (err) {
+    console.warn("Backend API unavailable or unreachable, utilizing client-side threat engine:", err)
+    return analyzeLocally(type, content)
+  }
 }
 
 export async function fetchHistoryAPI(): Promise<any[]> {
+  if (!API_BASE) return []
   try {
     const response = await fetch(`${API_BASE}/api/history`)
     if (!response.ok) return []

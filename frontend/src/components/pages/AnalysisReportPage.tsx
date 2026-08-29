@@ -143,7 +143,7 @@ export const AnalysisReportPage: React.FC<AnalysisReportPageProps> = ({ scan, on
       {/* Score & Classification */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <LiquidGlassCard
-          variant={scan.riskScore >= 80 ? "primary" : scan.riskScore >= 40 ? "cyan" : "emerald"}
+          variant={scan.riskScore >= 80 ? "primary" : scan.riskLevel === "SAFE" ? "emerald" : "cyan"}
           glow={true}
           className="lg:col-span-5 p-4 flex flex-col items-center justify-center"
         >
@@ -162,13 +162,15 @@ export const AnalysisReportPage: React.FC<AnalysisReportPageProps> = ({ scan, on
               {scan.threatType}
             </CardTitle>
             <CardDescription className="pt-2 text-slate-300 text-xs">
-              Target content was evaluated using NLP social engineering heuristics, domain SSL telemetry, and typosquat character matching algorithms.
+              {scan.aiExplanation || (scan.chips.length > 0
+                ? "Target content was evaluated using NLP social engineering heuristics, domain SSL telemetry, and typosquat character matching algorithms."
+                : "Target content was evaluated using heuristic security telemetry. Zero threat signals detected.")}
             </CardDescription>
           </CardHeader>
 
           <CardContent className="pt-0">
             <div className="pt-4 border-t border-slate-800/80 flex flex-col xs:flex-row xs:items-center justify-between gap-2 text-xs text-slate-400">
-              <span>Signals Triggered: <Badge variant="destructive" size="sm">{scan.chips.length}</Badge></span>
+              <span>Signals Triggered: <Badge variant={scan.chips.length > 0 ? "destructive" : "success"} size="sm">{scan.chips.length}</Badge></span>
               <span>Status: <Badge variant="info" size="sm">Analysis Complete</Badge></span>
             </div>
           </CardContent>

@@ -35,6 +35,22 @@ POPULAR_BRANDS = [
     "azure", "oracle", "office", "office365", "outlook", "onedrive", "icloud"
 ]
 
+VERIFIED_PLATFORMS = {
+    "github.com": "Official Developer Platform",
+    "gitlab.com": "Official Developer Platform",
+    "bitbucket.org": "Official Developer Platform",
+    "stackoverflow.com": "Verified Developer Community",
+    "mozilla.org": "Verified Open Web Platform",
+    "developer.mozilla.org": "Verified Developer Documentation",
+    "google.com": "Verified Search & Cloud Platform",
+    "microsoft.com": "Verified Enterprise Platform",
+    "apple.com": "Verified Consumer Platform",
+    "amazon.com": "Verified E-Commerce Infrastructure",
+    "wikipedia.org": "Verified Educational Resource",
+    "youtube.com": "Verified Media Platform",
+    "cloudflare.com": "Verified Security Infrastructure"
+}
+
 SUSPICIOUS_TLDS = {
     ".xyz", ".top", ".click", ".info", ".buzz", ".club",
     ".work", ".live", ".loan", ".support", ".online",
@@ -163,13 +179,34 @@ def analyze_input(input_type: str, content: str) -> Dict[str, Any]:
         # Brand impersonation and Levenshtein similarity
         domain_no_tld = domain.split(".")[0] if "." in domain else domain
 
-        # Check for numbers embedded inside words (e.g. chatg2t, facebo0k, paypa1, g00gle, netfl1x)
-        num_in_word = re.search(r'([a-z]{2,}[0-9]+[a-z]{1,})', domain_no_tld)
-        if num_in_word:
+        is_verified_platform = domain in VERIFIED_PLATFORMS or full_host in VERIFIED_PLATFORMS
+
+        # Check pure numeric domains (e.g. 468562.com, 123890.com)
+        is_pure_numeric = bool(re.match(r'^[0-9]+$', domain_no_tld))
+        if is_pure_numeric and not is_verified_platform:
             signals.append({
-                "label": "Embedded Numeric Obfuscation (Leetspeak)",
+                "label": "Pure Numeric Host Pattern",
+                "severity": "CRITICAL",
+                "detail": f"Domain '{domain_no_tld}' consists purely of numerical digits, a high-frequency marker for bulletproof disposable infrastructure and fraud gateways."
+            })
+            cat_domain_score += 65
+
+        # Check for numbers inside or combined with domain words (e.g. go56, pay99, win888, chatg2t, facebo0k)
+        num_in_domain = re.search(r'([a-z]+[0-9]+|[0-9]+[a-z]+)', domain_no_tld)
+        if num_in_domain and not is_verified_platform and not is_pure_numeric:
+            signals.append({
+                "label": "Alphanumeric Domain Pattern",
                 "severity": "HIGH",
-                "detail": f"Domain embeds numbers directly into alphabetic text ('{num_in_word.group(1)}'), a deceptive visual spoofing technique."
+                "detail": f"Domain incorporates short alphanumeric concatenation ('{domain_no_tld}'), frequently observed in disposable redirectors and phishing infrastructure."
+            })
+            cat_domain_score += 45
+
+        # Unverified Domain Status Check
+        if not is_verified_platform and not is_pure_numeric and not num_in_domain:
+            signals.append({
+                "label": "Unverified Third-Party Domain",
+                "severity": "MEDIUM",
+                "detail": f"Domain '{domain}' is not recognized in verified enterprise directories. Exercise caution before entering credentials."
             })
             cat_domain_score += 40
 
@@ -391,8 +428,24 @@ def analyze_input(input_type: str, content: str) -> Dict[str, Any]:
         confidence = min(98, max(70, 70 + (num_signals * 6)))
 
     # Classification Title
-    if b_domain >= 40 and any("Brand" in s["label"] or "Typosquat" in s["label"] for s in signals):
+    verified_title = None
+    if url_segments:
+        dom = url_segments.get("domain", "")
+        sub = url_segments.get("subdomain", "")
+        fhost = f"{sub}.{dom}" if sub else dom
+        verified_title = VERIFIED_PLATFORMS.get(dom) or VERIFIED_PLATFORMS.get(fhost)
+
+    if verified_title and len(signals) == 0:
+        classification_title = verified_title
+        risk_score = 4
+        severity = "LOW"
+    elif any("Numeric Host" in s["label"] for s in signals):
+        classification_title = "Pure Numeric Disposable Host"
+        severity = "CRITICAL" if risk_score >= 80 else "HIGH"
+    elif b_domain >= 40 and any("Brand" in s["label"] or "Typosquat" in s["label"] or "Leetspeak" in s["label"] for s in signals):
         classification_title = "Brand Impersonation & Typosquatting"
+    elif any("Alphanumeric" in s["label"] for s in signals):
+        classification_title = "Suspicious Alphanumeric Domain Pattern"
     elif b_credential >= 40 and b_social >= 30:
         classification_title = "Smishing Credential Harvest" if input_type == "message" else "Credential Phishing Gateway"
     elif b_social >= 40:
@@ -402,9 +455,13 @@ def analyze_input(input_type: str, content: str) -> Dict[str, Any]:
     elif risk_score >= 61:
         classification_title = "High Risk Phishing Vector"
     elif risk_score >= 31:
-        classification_title = "Suspicious Unverified Target"
+        classification_title = "Unverified Target (Caution Required)"
+    elif verified_title:
+        classification_title = verified_title
     else:
-        classification_title = "Benign Content Passed Clean"
+        classification_title = "Unverified Third-Party Domain"
+        risk_score = max(risk_score, 48)
+        severity = "MEDIUM"
 
     # Recommended Actions
     if risk_score >= 61:

@@ -1,14 +1,14 @@
 import confetti from "canvas-confetti"
 
 /**
- * Triggers a celebratory particle burst for LOW/MEDIUM risk results.
- * For HIGH/CRITICAL risk results, confetti is intentionally avoided.
+ * Triggers a celebratory particle burst ONLY when the content is verified authentic and SAFE.
+ * For unverified, medium, high or critical risk results, celebration is strictly disabled.
  */
-export function triggerScanCelebration(riskScore: number): void {
-  if (riskScore <= 60) {
+export function triggerScanCelebration(riskScore: number, riskLevel?: string): void {
+  if (riskLevel === "SAFE" && riskScore <= 10) {
     // Subtle, elegant cyan & emerald celebration burst
     confetti({
-      particleCount: 50,
+      particleCount: 55,
       angle: 90,
       spread: 65,
       origin: { y: 0.62 },

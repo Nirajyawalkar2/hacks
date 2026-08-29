@@ -19,24 +19,26 @@ export const RadialScore: React.FC<RadialScoreProps> = ({
   const circumference = 2 * Math.PI * radius
   const strokeDashoffset = circumference - (score / 100) * circumference
 
+  const isSafe = riskLevel === "SAFE"
+
   const getScoreStroke = (val: number) => {
     if (val >= 80) return "#ef4444"
     if (val >= 60) return "#f97316"
-    if (val >= 40) return "#f59e0b"
+    if (val >= 35 || !isSafe) return "#f59e0b"
     return "#10b981"
   }
 
   const getGlowBg = (val: number) => {
     if (val >= 80) return "bg-rose-500/25 shadow-[0_0_80px_rgba(244,63,94,0.45)]"
     if (val >= 60) return "bg-orange-500/25 shadow-[0_0_80px_rgba(249,115,22,0.4)]"
-    if (val >= 40) return "bg-amber-500/25 shadow-[0_0_80px_rgba(245,158,11,0.35)]"
+    if (val >= 35 || !isSafe) return "bg-amber-500/25 shadow-[0_0_80px_rgba(245,158,11,0.35)]"
     return "bg-emerald-500/25 shadow-[0_0_80px_rgba(16,185,129,0.35)]"
   }
 
   const getBadgeColor = (val: number) => {
     if (val >= 80) return "bg-rose-500/20 text-rose-300 border-rose-500/50 shadow-[0_0_20px_rgba(244,63,94,0.35)] animate-pulse"
     if (val >= 60) return "bg-orange-500/20 text-orange-300 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]"
-    if (val >= 40) return "bg-amber-500/20 text-amber-300 border-amber-500/50 shadow-[0_0_20px_rgba(245,158,11,0.3)]"
+    if (val >= 35 || !isSafe) return "bg-amber-500/20 text-amber-300 border-amber-500/50 shadow-[0_0_20px_rgba(245,158,11,0.3)]"
     return "bg-emerald-500/20 text-emerald-300 border-emerald-500/50 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
   }
 

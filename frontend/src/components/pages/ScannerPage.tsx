@@ -18,12 +18,12 @@ import {
 import { motion, AnimatePresence } from "framer-motion"
 import {
   EXAMPLE_PRESETS,
-  MOCK_SCANS,
   type ExamplePreset,
   type ScanItem,
   type ThreatChip
 } from "@/data/mockData"
 import { analyzeThreatAPI } from "@/services/api"
+import { analyzeLocally } from "@/lib/localThreatEngine"
 import { triggerScanCelebration } from "@/lib/celebration"
 import { Badge } from "@/components/lightswind/badge"
 import { Progress } from "@/components/lightswind/progress"
@@ -70,10 +70,12 @@ export const ScannerPage: React.FC<ScannerPageProps> = ({ activeScan, onScanComp
 
     if (lastCelebratedScanIdRef.current !== result.id) {
       lastCelebratedScanIdRef.current = result.id
-      // Trigger confetti only for LOW/MEDIUM risk
-      triggerScanCelebration(result.riskScore)
-      setJustCompletedScan(true)
-      setTimeout(() => setJustCompletedScan(false), 3200)
+      // Trigger confetti only for verified SAFE risk
+      triggerScanCelebration(result.riskScore, result.riskLevel)
+      if (result.riskLevel === "SAFE") {
+        setJustCompletedScan(true)
+        setTimeout(() => setJustCompletedScan(false), 3200)
+      }
     }
   }
 
@@ -95,35 +97,11 @@ export const ScannerPage: React.FC<ScannerPageProps> = ({ activeScan, onScanComp
         handleScanFinished(result)
       }, 700)
     } catch (err) {
-      console.warn("Backend API call failed, using local heuristic fallback:", err)
+      console.warn("Backend API call failed, using client-side heuristic engine:", err)
       setTimeout(() => {
         clearInterval(interval)
         setIsScanning(false)
-
-        const isSuspicious =
-          inputText.toLowerCase().includes("urgent") ||
-          inputText.toLowerCase().includes("paypa1") ||
-          inputText.toLowerCase().includes("chase") ||
-          inputText.toLowerCase().includes("package") ||
-          inputText.toLowerCase().includes("verify") ||
-          inputText.toLowerCase().includes("suspended")
-
-        const generatedResult: ScanItem = isSuspicious
-          ? {
-              ...MOCK_SCANS[0],
-              id: `SCN-${Math.floor(10000 + Math.random() * 90000)}`,
-              inputType: inputType,
-              content: inputText,
-              timestamp: new Date().toISOString().replace("T", " ").substring(0, 19)
-            }
-          : {
-              ...MOCK_SCANS[2],
-              id: `SCN-${Math.floor(10000 + Math.random() * 90000)}`,
-              inputType: inputType,
-              content: inputText,
-              timestamp: new Date().toISOString().replace("T", " ").substring(0, 19)
-            }
-
+        const generatedResult = analyzeLocally(inputType, inputText)
         handleScanFinished(generatedResult)
       }, 800)
     }
@@ -363,26 +341,22 @@ export const ScannerPage: React.FC<ScannerPageProps> = ({ activeScan, onScanComp
               </AnimatePresence>
 
               <LiquidGlassCard
-                variant={currentResult.riskScore >= 80 ? "primary" : currentResult.riskScore >= 40 ? "cyan" : "emerald"}
+                variant={currentResult.riskScore >= 80 ? "primary" : currentResult.riskLevel === "SAFE" ? "emerald" : "cyan"}
                 glow={true}
                 className="w-full p-4 flex flex-col items-center justify-center relative"
               >
-                {/* Floating "Scan Complete" Checkmark Pulse Badge Cue */}
+                {/* Floating "Scan Complete" Checkmark Pulse Badge Cue - ONLY for genuine SAFE platforms */}
                 <AnimatePresence>
-                  {justCompletedScan && (
+                  {justCompletedScan && currentResult.riskLevel === "SAFE" && (
                     <motion.div
                       initial={{ opacity: 0, y: -12, scale: 0.85 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -8, scale: 0.85 }}
                       transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                      className={`absolute top-3 left-1/2 -translate-x-1/2 z-30 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider border shadow-xl ${
-                        currentResult.riskScore <= 60
-                          ? "bg-emerald-950/95 text-emerald-300 border-emerald-500/70 shadow-emerald-500/30"
-                          : "bg-rose-950/95 text-rose-300 border-rose-500/70 shadow-rose-500/30"
-                      }`}
+                      className="absolute top-3 left-1/2 -translate-x-1/2 z-30 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider border shadow-xl bg-emerald-950/95 text-emerald-300 border-emerald-500/70 shadow-emerald-500/30"
                     >
                       <CheckCircle2 className="h-3.5 w-3.5 animate-pulse shrink-0" />
-                      <span>ANALYSIS COMPLETE</span>
+                      <span>VERIFIED SAFE PLATFORM</span>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -405,14 +379,16 @@ export const ScannerPage: React.FC<ScannerPageProps> = ({ activeScan, onScanComp
                   {currentResult.threatType}
                 </CardTitle>
                 <CardDescription className="pt-2 text-slate-300 font-sans text-xs leading-relaxed">
-                  Target content analyzed against heuristic domain telemetry and NLP social engineering models. Multiple suspicious signals were identified.
+                  {currentResult.aiExplanation || (currentResult.chips.length > 0
+                    ? "Target content analyzed against heuristic domain telemetry. Multiple suspicious signals were identified."
+                    : "Target content analyzed against heuristic domain telemetry. Zero threat signals detected.")}
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="pt-0">
                 <div className="pt-4 border-t border-slate-800/80 flex flex-col xs:flex-row xs:items-center justify-between gap-2 font-mono text-xs text-slate-400">
                   <span>Timestamp: <strong className="text-slate-200">{currentResult.timestamp}</strong></span>
-                  <span>Signals Triggered: <Badge variant="destructive" size="sm">{currentResult.chips.length}</Badge></span>
+                  <span>Signals Triggered: <Badge variant={currentResult.chips.length > 0 ? "destructive" : "success"} size="sm">{currentResult.chips.length}</Badge></span>
                 </div>
               </CardContent>
             </CardSpotlight>
