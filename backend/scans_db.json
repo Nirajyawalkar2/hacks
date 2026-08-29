@@ -1,0 +1,1786 @@
+[
+  {
+    "id": "74f94b35-041d-4f8c-8aba-8e13b239e3ac",
+    "timestamp": "2026-08-29T09:42:21.988366+00:00",
+    "input_type": "url",
+    "content": "https://www.snapch78t.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('snapch78t'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (snapchat)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'snapch78t' is deceptively similar to legitimate brand 'snapchat.com' (Edit distance: 2)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "snapch78t.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The website you checked is a fake copy designed to look like Snapchat, but it is actually a trap run by scammers.",
+      "detailed_reasoning": "The URL uses the deceptive address snapch78t.com, which cleverly replaces the letter 'a' with a number seven and drops the 'a' and 't' to mimic the real snapchat.com brand. Scammers use this specific technique, known as typosquatting, because the slight misspelling is very easy to miss at a quick glance. Furthermore, the site uses a standard HTTPS security certificate, which creates a false sense of safety to trick you into trusting it.",
+      "attacker_intent": "The attacker is trying to trick you into thinking you are visiting the official Snapchat platform so they can steal your login credentials and personal account information.",
+      "real_world_comparison": "This is like a criminal setting up a fake storefront with a misspelled store sign on a busy street to trick shoppers into handing over their credit card details."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "e3064cfe-5288-4f12-99b0-3297bae21f00",
+    "timestamp": "2026-08-29T09:36:58.923734+00:00",
+    "input_type": "url",
+    "content": "https://www.snapch78t.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('snapch78t'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (snapchat)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'snapch78t' is deceptively similar to legitimate brand 'snapchat.com' (Edit distance: 2)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "snapch78t.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The website you checked is a fake copy of Snapchat designed to trick you into thinking it is the real app login page. It uses a cleverly altered web address to mimic the official service.",
+      "detailed_reasoning": "The analysis flagged this link because the web address, https://www.snapch78t.com, replaces the letters 'at' at the end of Snapchat with the number '78', which is a classic typosquatting trick. Attackers use this visual spoofing method so that people glancing quickly at the link will mistake it for the legitimate snapchat.com. Additionally, the site uses an HTTPS secure connection, which scammers routinely do to falsely make their fraudulent pages look safe and trustworthy.",
+      "attacker_intent": "The attacker's goal is to lure you onto this lookalike page to steal your login credentials, personal information, or access to your social media account. Once you type your password in, they capture it to compromise your profile.",
+      "real_world_comparison": "This is similar to a criminal printing a fake storefront sign that looks identical to a local bank just to trick customers into walking inside and handing over their keys."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "eeb09fb9-9bb2-482e-91cc-097c8231f9f2",
+    "timestamp": "2026-08-29T09:36:44.975018+00:00",
+    "input_type": "url",
+    "content": "https://www.snapchat.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "snapchat.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web link you submitted for https://www.snapchat.com is completely safe and legitimate to visit. It passed all our security checks with zero threat indicators detected.",
+      "detailed_reasoning": "Our automated scanning tools analyzed the exact domain structure, URL patterns, and underlying page elements of https://www.snapchat.com and found no deceptive techniques. The address uses the genuine, official domain name for Snapchat without any hidden subdomains, strange top-level domains, or confusing character substitutions designed to mislead you. Furthermore, the page contains no social engineering tactics, fake login prompts, or hidden credential-harvesting forms intended to steal your personal information.",
+      "attacker_intent": "Since this is the legitimate Snapchat website, there is no malicious intent present and the site is operated by the official service providers.",
+      "real_world_comparison": "This is equivalent to walking into a properly labeled, official bank branch rather than a counterfeit storefront set up by a fraudster."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "f91faab7-71aa-48f6-82f6-e90f54510491",
+    "timestamp": "2026-08-29T09:36:28.317252+00:00",
+    "input_type": "url",
+    "content": "https://www.instag85m.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('instag85m'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (instagram)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'instag85m' is deceptively similar to legitimate brand 'instagram.com' (Edit distance: 2)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "instag85m.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The website you checked is a fake copy designed to look like Instagram, scoring a high threat level of 82 out of 100. It uses a deceptive web address intended to trick you into thinking it is the official platform.",
+      "detailed_reasoning": "The analysis flagged the domain 'instag85m.com' because it uses leetspeak by embedding the numbers '85' inside the word to visually mimic the real brand name. This is a clear case of typosquatting, where the domain is just two edits away from 'instagram.com', specifically designed to confuse visitors. Additionally, the site uses an HTTPS security certificate, which is a tactic attackers use to trick people into believing an illegitimate page is safe and official.",
+      "attacker_intent": "The attacker is likely trying to trick you into entering your login credentials or personal information on a fake login page to steal your account. Once you input your details, they can gain unauthorized access to your real profile.",
+      "real_world_comparison": "This is like a criminal setting up a fake storefront with a slightly misspelled neon sign next to a popular bank to trick customers into walking in and handing over their money."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "0823a580-7dff-42a0-b63f-2944624de965",
+    "timestamp": "2026-08-29T09:35:35.410783+00:00",
+    "input_type": "url",
+    "content": "https://www.instag85m.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('instag85m'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (instagram)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'instag85m' is deceptively similar to legitimate brand 'instagram.com' (Edit distance: 2)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "instag85m.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address you checked is a clever fake designed to look like the real Instagram website, earning a high threat score of 82 out of 100.",
+      "detailed_reasoning": "The website uses the address https://www.instag85m.com, which cleverly replaces the letter 'a' with the number '8' and adds an 'm' to mimic the official instagram.com domain with an edit distance of only 2. This technique, known as typosquatting and leetspeak obfuscation, tricks your eyes into thinking you are on a trusted platform. Furthermore, the site uses an HTTPS secure connection, which is a deceptive tactic attackers use to make their fake page look legitimately safe.",
+      "attacker_intent": "The attacker is likely trying to trick you into entering your login credentials or personal information on a fake login page so they can steal your account.",
+      "real_world_comparison": "This is similar to a criminal placing a counterfeit storefront with a misspelled sign right next to a real bank to fool customers into handing over their keys."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "d90d8cb0-0248-475e-9a68-7591d522e10d",
+    "timestamp": "2026-08-29T09:35:21.381203+00:00",
+    "input_type": "url",
+    "content": "https://www.instagr7m.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('instagr7m'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (instagram)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'instagr7m' is deceptively similar to legitimate brand 'instagram.com' (Edit distance: 1)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "instagr7m.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The website you checked is a fake copy designed to look like Instagram to trick visitors. It is not the real Instagram website.",
+      "detailed_reasoning": "The address you submitted, https://www.instagr7m.com, uses a trick where the letter 'a' in Instagram is replaced with the number '7'. This is a typosquatting technique meant to fool you into thinking you are visiting the official instagram.com domain at a quick glance. Because it is extremely similar with an edit distance of only one character, it easily catches people off guard. Furthermore, the site uses an HTTPS secure certificate, which scammers frequently do to falsely mimic the padlock icon of safety and make their fake login page appear legitimate.",
+      "attacker_intent": "The attacker is likely trying to trick you into entering your Instagram username and password so they can steal your account credentials. Once they have your login details, they can access your personal information or use your account to send spam to your followers.",
+      "real_world_comparison": "This is similar to a scammer setting up a fake storefront with a slightly misspelled name on the sign to trick shoppers into walking inside."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "d29254c5-182c-4fb9-9461-d59d89b2ea1a",
+    "timestamp": "2026-08-29T09:35:11.711967+00:00",
+    "input_type": "url",
+    "content": "https://www.instagram.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "instagram.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The link you provided for https://www.instagram.com is completely safe to visit and is the official website for Instagram. Our security checks found no warning signs or malicious activity associated with it.",
+      "detailed_reasoning": "When we analyzed the URL https://www.instagram.com, we looked closely at its domain structure, path patterns, and potential social engineering tactics. The domain correctly points to the legitimate, globally recognized Instagram platform without any deceptive misspellings, strange top-level domains, or hidden redirect mechanisms. Furthermore, there are no credential-harvesting forms or urgency triggers present on the page, meaning it passed every single one of our security heuristics with a clean score of zero.",
+      "attacker_intent": "Since this is the legitimate Instagram website, there is no malicious attacker intent present; the site's goal is simply to provide the authentic social media networking service to its users.",
+      "real_world_comparison": "Visiting this official link is as safe as walking into a bank using its front door, rather than being tricked by a fake storefront set up across the street."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "a22add45-38f9-4d77-baaa-3910adf04dc8",
+    "timestamp": "2026-08-29T09:34:58.086956+00:00",
+    "input_type": "url",
+    "content": "https://www.faceb8ok.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('faceb8ok'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (facebook)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'faceb8ok' is deceptively similar to legitimate brand 'facebook.com' (Edit distance: 1)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "faceb8ok.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web link you checked is a fake website designed to look exactly like Facebook to trick you into trusting it. It received a high threat score of 82 out of 100.",
+      "detailed_reasoning": "The website uses the address 'faceb8ok.com', which intentionally replaces the letter 'o' in Facebook with the number '8' in a deceptive trick known as leetspeak. This typosquatted domain is extremely similar to the legitimate facebook.com, differing by an edit distance of just one character. Furthermore, the site uses an HTTPS secure connection, which is a tactic attackers use to falsely make the illegitimate lookalike domain appear safe and legitimate to visitors.",
+      "attacker_intent": "The attacker is likely trying to deceive you into thinking you are on the official Facebook website so you will enter your username, password, or personal information.",
+      "real_world_comparison": "This is like a criminal putting a fake store sign with a slightly misspelled name over a doorway to trick shoppers into walking inside and handing over their valuables."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "362e9c04-6535-457f-9357-9dcc731c9631",
+    "timestamp": "2026-08-29T09:34:49.249815+00:00",
+    "input_type": "url",
+    "content": "https://www.facebook.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebook.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The link you submitted for https://www.facebook.com is completely safe and legitimate to visit.",
+      "detailed_reasoning": "Our security scan evaluated the official domain structure of https://www.facebook.com and found zero indicators of malicious intent. The URL pattern conforms entirely to the authentic social media platform without any deceptive misspellings or hidden subdomains. Furthermore, heuristic analysis detected no social engineering tactics, urgency triggers, or credential harvesting forms designed to steal your login information.",
+      "attacker_intent": "There is no attacker or malicious intent associated with this submission, as it is the genuine and official Facebook website.",
+      "real_world_comparison": "This is equivalent to walking into an officially branded and verified storefront rather than a counterfeit market stall."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "b6fddd91-18c9-4e15-a15f-624a632be884",
+    "timestamp": "2026-08-29T09:33:47.672555+00:00",
+    "input_type": "url",
+    "content": "https://www.chatg2t.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Embedded Numeric Obfuscation (Leetspeak)",
+        "severity": "HIGH",
+        "detail": "Domain embeds numbers directly into alphabetic text ('chatg2t'), a deceptive visual spoofing technique."
+      },
+      {
+        "label": "Typosquatted Brand Lookalike (chatgpt)",
+        "severity": "CRITICAL",
+        "detail": "Domain token 'chatg2t' is deceptively similar to legitimate brand 'chatgpt.com' (Edit distance: 1)."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 100,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "chatg2t.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The website you visited is a clever counterfeit designed to look like the real ChatGPT service, but it is actually run by scammers. It received a high threat score of 82 out of 100 because of intentional deception.",
+      "detailed_reasoning": "The web address 'chatg2t.com' uses leetspeak by swapping the letter 'p' for the number '2' to mimic the legitimate brand 'chatgpt.com' with only a single character difference. This specific typosquatting technique is designed to fool people who type quickly or do not look closely at their address bar. Furthermore, the site uses an HTTPS security certificate to display a padlock icon, which tricks visitors into falsely believing the connection is officially endorsed by OpenAI.",
+      "attacker_intent": "The attacker is likely trying to trick you into entering your login credentials or personal information so they can steal your account or financial details.",
+      "real_world_comparison": "This is similar to a criminal setting up a fake storefront with a misspelled name to trick shoppers into handing over their credit card numbers."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "1f84b17e-c5eb-4d05-a697-0f6aeed121d3",
+    "timestamp": "2026-08-29T09:28:35.830736+00:00",
+    "input_type": "url",
+    "content": "https://www.chatg2t.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "chatg2t.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address https://www.chatg2t.com appears safe to visit, as our security scans found no malicious indicators or deceptive tactics.",
+      "detailed_reasoning": "We analyzed the structure and pattern of the URL https://www.chatg2t.com and found no evidence of hidden threats. The domain passed all heuristic checks, meaning it did not exhibit common red flags like lookalike character substitutions, suspicious top-level domains, or attempts to harvest login credentials. Furthermore, there were no social engineering tactics or deceptive redirection patterns detected during our inspection.",
+      "attacker_intent": "Since the URL passed all security checks cleanly, there is no indication of malicious attacker intent associated with this specific link at this time.",
+      "real_world_comparison": "This is comparable to typing a standard, legitimate web address directly into your browser without encountering any deceptive road signs or fake storefronts."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "320f3cdc-e838-4643-804d-692c40b56bf2",
+    "timestamp": "2026-08-29T09:28:26.453497+00:00",
+    "input_type": "url",
+    "content": "https://www.chatgpt.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "chatgpt.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address https://www.chatgpt.com is completely safe to visit and has passed all security checks without any warning signs.",
+      "detailed_reasoning": "Our security analysis evaluated the domain structure, URL patterns, social engineering tactics, and potential credential harvesting risks for https://www.chatgpt.com and found zero red flags. The URL correctly points to the official OpenAI platform without any deceptive misspellings, hidden characters, or suspicious top-level domains. Furthermore, the page content lacks any pressure tactics, urgency signals, or fake login prompts that are typically used to manipulate visitors. Because it successfully met every baseline heuristic security check, it triggered no malicious detection signals.",
+      "attacker_intent": "Since this is the legitimate website rather than a malicious replica, there is no attacker intent or attempt to deceive users present.",
+      "real_world_comparison": "This is equivalent to checking the ID badge of a known, trusted employee at the front desk and confirming they belong in the building."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "55865a4d-d0ab-4096-ae5d-f2b52d6ccbdf",
+    "timestamp": "2026-08-29T09:26:47.979894+00:00",
+    "input_type": "url",
+    "content": "http://127.0.0.1:5000/api/history",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Direct IP Address Host",
+        "severity": "CRITICAL",
+        "detail": "URL routes directly to a raw IP address instead of an authenticated domain name."
+      },
+      {
+        "label": "Excessive Subdomains",
+        "severity": "HIGH",
+        "detail": "Domain contains 2 nested subdomains to obfuscate the real target authority."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 75,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "127.0",
+      "domain": "0.1",
+      "path": "/api/history",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of High Risk Phishing Vector.",
+      "detailed_reasoning": "Analysis of 'http://127.0.0.1:5000/api/history' identified critical deception markers: URL routes directly to a raw IP address instead of an authenticated domain name. Domain contains 2 nested subdomains to obfuscate the real target authority. Connection is unencrypted (plain HTTP), allowing credential interception in transit.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor is using obfuscation techniques to route user traffic through an unauthorized url vector.",
+      "real_world_comparison": "Representative of malicious redirection chains and disposable phishing campaigns."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "0539a50c-a42b-4b48-9b48-d2b1ba5b8363",
+    "timestamp": "2026-08-29T09:26:17.993642+00:00",
+    "input_type": "url",
+    "content": "https://localhost5173",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "",
+      "domain": "localhost5173",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web address you checked, https://localhost5173, is completely safe and normal for you to visit. It passed all of our security checks without triggering any warning flags.",
+      "detailed_reasoning": "When we analyzed the URL https://localhost5173, we looked closely at how the web address is structured and what it tries to do. The 'localhost' part simply points directly back to your own computer rather than an external website on the internet. Because of this, it does not use a deceptive lookalike domain name, hidden redirects, or social engineering tactics to trick you. It scored a very low 5 out of 100 because there are no signs of malicious coding, fake login forms, or credential harvesting attempts present.",
+      "attacker_intent": "Since https://localhost5173 refers to a local environment on a computer, there is no malicious attacker involved; this address is typically used by developers to test software they are currently building on their own machine.",
+      "real_world_comparison": "Visiting this address is like opening a locked diary inside your own house rather than handing a physical document to a stranger outside."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "449c5c45-d7dd-4243-b0d8-f0a9bade5416",
+    "timestamp": "2026-08-29T09:25:11.200406+00:00",
+    "input_type": "url",
+    "content": "https://www.facebo0k.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution (Facebook)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook')."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 80,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebo0k.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "The web link you checked is a fake website designed to look exactly like Facebook to trick visitors. It scored 82 out of 100, placing it at a high threat level.",
+      "detailed_reasoning": "We analyzed the web address facebo0k.com and found it uses a deceptive trick known as typosquatting. Instead of the real letter 'o', the attacker replaced it with the number '0' to silently mimic the authentic facebook.com brand. Furthermore, the site uses an HTTPS secure connection, which cybercriminals frequently do on fake domains to trick you into believing the page is officially verified and safe.",
+      "attacker_intent": "The attacker is likely trying to capture your login credentials and personal information by luring you onto a replica login page. Once you enter your details, they can hijack your real account.",
+      "real_world_comparison": "This is similar to a criminal printing counterfeit company stationery with a slightly misspelled name to trick employees into trusting a fake invoice."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "1615249d-4f83-41c9-b190-26904b2afc3d",
+    "timestamp": "2026-08-29T09:24:21.510704+00:00",
+    "input_type": "url",
+    "content": "https://www.facebo0k.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution (Facebook)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook')."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 80,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebo0k.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of Brand Impersonation & Typosquatting.",
+      "detailed_reasoning": "Analysis of 'https://www.facebo0k.com' identified critical deception markers: Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook'). Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "1f23fe3e-26b6-4a34-8c32-72147d676e9e",
+    "timestamp": "2026-08-29T09:18:47.889617+00:00",
+    "input_type": "url",
+    "content": "https://www.chat5pt.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "chat5pt.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'https://www.chat5pt.com' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "df10355d-c8b0-44e0-8119-7e751a28b718",
+    "timestamp": "2026-08-29T09:18:31.250177+00:00",
+    "input_type": "url",
+    "content": "https://www.chatgpt.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "chatgpt.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'https://www.chatgpt.com' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "44badd7a-8237-482d-9f7d-8019b506af57",
+    "timestamp": "2026-08-29T09:18:00.363268+00:00",
+    "input_type": "url",
+    "content": "https://www.xhatgp+.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "xhatgp+.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'https://www.xhatgp+.com' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "2c4e4aa3-a23c-47ba-8b5c-997ddc201039",
+    "timestamp": "2026-08-29T09:17:44.064576+00:00",
+    "input_type": "url",
+    "content": "https://www.facebo0k.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution (Facebook)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook')."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 80,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebo0k.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of Brand Impersonation & Typosquatting.",
+      "detailed_reasoning": "Analysis of 'https://www.facebo0k.com' identified critical deception markers: Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook'). Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "e518712d-4d14-46f0-b49b-5b5be5a1b5ad",
+    "timestamp": "2026-08-29T09:16:23.290189+00:00",
+    "input_type": "url",
+    "content": "https://www.facebo0k.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution (Facebook)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook')."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 80,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebo0k.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of Brand Impersonation & Typosquatting.",
+      "detailed_reasoning": "Analysis of 'https://www.facebo0k.com' identified critical deception markers: Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook'). Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "3e0278d9-ab4f-4eb1-ae01-1553f9de8ca8",
+    "timestamp": "2026-08-29T09:15:47.288542+00:00",
+    "input_type": "url",
+    "content": "https://www.facebo0k.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution (Facebook)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook')."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 80,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebo0k.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of Brand Impersonation & Typosquatting.",
+      "detailed_reasoning": "Analysis of 'https://www.facebo0k.com' identified critical deception markers: Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook'). Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "2b5c0e95-0c3d-46fd-9e1c-e536211b7c16",
+    "timestamp": "2026-08-29T09:15:41.074817+00:00",
+    "input_type": "url",
+    "content": "https://www.facebook.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebook.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'https://www.facebook.com' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "c0f13ccb-c51b-4ee9-ae15-7241a8b95517",
+    "timestamp": "2026-08-29T09:14:39.305481+00:00",
+    "input_type": "url",
+    "content": "https:\\www.facebo0k.com",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution (Facebook)",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook')."
+      },
+      {
+        "label": "Spoofed Brand on SSL/HTTPS Certificate",
+        "severity": "HIGH",
+        "detail": "Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security."
+      },
+      {
+        "label": "Deceptive URL Syntax (Backslashes)",
+        "severity": "HIGH",
+        "detail": "URL uses backslashes ('\\') instead of standard forward slashes, an evasion technique used to bypass security parsers."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 80,
+      "url_pattern": 35,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "facebo0k.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of Brand Impersonation & Typosquatting.",
+      "detailed_reasoning": "Analysis of 'https:\\www.facebo0k.com' identified critical deception markers: Substituted characters (e.g., '0' for 'o', '1' for 'l') detected mimicking authentic brand 'facebook.com' ('facebo0k' -> 'facebook'). Target operates over HTTPS on an illegitimate lookalike domain to create a deceptive appearance of security. URL uses backslashes ('\\') instead of standard forward slashes, an evasion technique used to bypass security parsers.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "f24d28d5-dadb-495b-86d2-825f40d3d860",
+    "timestamp": "2026-08-29T09:04:34.543449+00:00",
+    "input_type": "url",
+    "content": "https:\\\\www.facebo0k.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "https",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'https:\\\\www.facebo0k.com' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "5cdb902e-059f-4eed-ac62-83349ff9feba",
+    "timestamp": "2026-08-29T09:04:08.554570+00:00",
+    "input_type": "url",
+    "content": "https:\\\\www.linkedin.com",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "https",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'https:\\\\www.linkedin.com' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "29c990ed-f006-46a9-b1be-cd51fb6fb20d",
+    "timestamp": "2026-08-29T08:59:24.732962+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'http://localhost:5173/' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "e0de49f0-0ab3-41cf-a414-5316d4f69e0e",
+    "timestamp": "2026-08-29T08:54:42.408134+00:00",
+    "input_type": "url",
+    "content": "http://paypa1-secure-verification.com/login",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '1' for 'l' or '0' for 'o') detected mimicking Paypal."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 40,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "paypa1-secure-verification.com",
+      "path": "/login",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of High Risk Phishing Vector.",
+      "detailed_reasoning": "Analysis of 'http://paypa1-secure-verification.com/login' identified critical deception markers: Substituted characters (e.g., '1' for 'l' or '0' for 'o') detected mimicking Paypal. Connection is unencrypted (plain HTTP), allowing credential interception in transit.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "08e35a0c-286d-49b1-b80e-4d51cda2af8e",
+    "timestamp": "2026-08-29T08:54:24.691381+00:00",
+    "input_type": "url",
+    "content": "http://paypa1-secure-verification.com/login",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 82,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '1' for 'l' or '0' for 'o') detected mimicking Paypal."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 40,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "paypa1-secure-verification.com",
+      "path": "/login",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of High Risk Phishing Vector.",
+      "detailed_reasoning": "Analysis of 'http://paypa1-secure-verification.com/login' identified critical deception markers: Substituted characters (e.g., '1' for 'l' or '0' for 'o') detected mimicking Paypal. Connection is unencrypted (plain HTTP), allowing credential interception in transit.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "85fa24db-dc19-4a7e-93aa-8ed0d75037fb",
+    "timestamp": "2026-08-29T08:47:58.046703+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": {
+      "summary": "This url exhibits normal structure and passed all baseline phishing heuristics.",
+      "detailed_reasoning": "The analyzed target 'http://localhost:5173/' does not demonstrate brand lookalike tricks, deceptive subdomains, unencrypted transmission risks, or high-pressure social engineering keywords. The routing parameters and SSL configuration align with standard legitimate traffic.",
+      "attacker_intent": "No malicious intent or credential harvesting pattern was detected in this submission.",
+      "real_world_comparison": "Consistent with authentic digital communications and verified public endpoints."
+    },
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "bd9dbf03-3348-42e4-9a3e-7a63a4e38932",
+    "timestamp": "2026-08-29T08:38:50.910801+00:00",
+    "input_type": "url",
+    "content": "http://paypa1-secure-billing.net/login?token=92837491",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Leetspeak Character Substitution",
+        "severity": "CRITICAL",
+        "detail": "Substituted characters (e.g., '1' for 'l' or '0' for 'o') detected mimicking Paypal."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      },
+      {
+        "label": "Suspicious Query Parameters",
+        "severity": "MEDIUM",
+        "detail": "Contains lengthy or redirection-based URL query parameters typical in session hijacking."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 40,
+      "url_pattern": 45,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "paypa1-secure-billing.net",
+      "path": "/login",
+      "params": "token=92837491"
+    },
+    "ai_explanation": {
+      "summary": "Flagged as HIGH risk (82/100) exhibiting distinct signatures of High Risk Phishing Vector.",
+      "detailed_reasoning": "Analysis of 'http://paypa1-secure-billing.net/login?token=92837491' identified critical deception markers: Substituted characters (e.g., '1' for 'l' or '0' for 'o') detected mimicking Paypal. Connection is unencrypted (plain HTTP), allowing credential interception in transit. Contains lengthy or redirection-based URL query parameters typical in session hijacking.. These structural anomalies are intentionally engineered to bypass basic security scrutiny and trick recipients.",
+      "attacker_intent": "The threat actor seeks to capitalize on visual deception by spoofing trusted brand trademarks on an illegitimate host.",
+      "real_world_comparison": "Standard typosquatting and homoglyph brand impersonation campaign designed to deceive human visual inspection."
+    },
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "7619bfff-f2c0-44d0-b6ca-3fe5d6dbda44",
+    "timestamp": "2026-08-29T08:22:28.255534+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "a0bcf573-3304-45b1-af86-8e583925a18b",
+    "timestamp": "2026-08-29T08:22:24.462605+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "b5f298a1-2f47-4bff-ba75-d7d5c135447b",
+    "timestamp": "2026-08-29T08:21:26.732126+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "9fd07326-7768-44f2-9530-ddb67d0fb569",
+    "timestamp": "2026-08-29T08:21:18.746350+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "ef254f1c-80b0-41fb-8141-c249db0f15f6",
+    "timestamp": "2026-08-29T08:08:46.912393+00:00",
+    "input_type": "url",
+    "content": "http://127.0.0.1:5000/",
+    "risk_score": 82,
+    "severity": "HIGH",
+    "confidence": 88,
+    "classification_title": "High Risk Phishing Vector",
+    "signals": [
+      {
+        "label": "Direct IP Address Host",
+        "severity": "CRITICAL",
+        "detail": "URL routes directly to a raw IP address instead of an authenticated domain name."
+      },
+      {
+        "label": "Excessive Subdomains",
+        "severity": "HIGH",
+        "detail": "Domain contains 2 nested subdomains to obfuscate the real target authority."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 75,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "127.0",
+      "domain": "0.1",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url is classified as HIGH risk due to multiple suspicious indicators. URL routes directly to a raw IP address instead of an authenticated domain name. Additionally, Domain contains 2 nested subdomains to obfuscate the real target authority.. Cyber adversaries utilize these exact deception patterns to induce panic and intercept authentication credentials.",
+    "recommended_action": [
+      "Do not click this link or submit any personal credentials.",
+      "Do not enter passwords, OTP codes, or banking details.",
+      "Report this message or URL to your organization's security team."
+    ]
+  },
+  {
+    "id": "931ff1f0-f0eb-49ef-ba09-484bff59319e",
+    "timestamp": "2026-08-29T08:05:48.325237+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "75923ec3-85a4-4269-af4d-56b1fa6c72e2",
+    "timestamp": "2026-08-29T08:05:16.294731+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "f550db6f-1885-413b-9826-e9ecc086a95f",
+    "timestamp": "2026-08-29T08:05:02.020399+00:00",
+    "input_type": "url",
+    "content": "https://www.instagram.com/",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "instagram.com",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "f5073b0a-4986-4f51-9928-de57ba88c1b7",
+    "timestamp": "2026-08-29T08:04:25.975711+00:00",
+    "input_type": "url",
+    "content": "https://claude.ai/chat/d8d45191-9f14-459b-b532-fc5ecec53d7b?onboarding=1",
+    "risk_score": 5,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "",
+      "domain": "claude.ai",
+      "path": "/chat/d8d45191-9f14-459b-b532-fc5ecec53d7b",
+      "params": "onboarding=1"
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "1daa5ddd-f8a2-4a8a-89b0-12b7a36424cb",
+    "timestamp": "2026-08-29T08:01:37.289462+00:00",
+    "input_type": "url",
+    "content": "http://localhost:5173/",
+    "risk_score": 9,
+    "severity": "LOW",
+    "confidence": 76,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 25,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "",
+      "domain": "localhost",
+      "path": "/",
+      "params": ""
+    },
+    "ai_explanation": "This url exhibits normal structure and passed baseline threat heuristics. No known typosquatting domains, deceptive urgency triggers, or credential harvesting hooks were detected. Continue to exercise standard cyber hygiene.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  },
+  {
+    "id": "SCN-92841",
+    "timestamp": "2026-08-29 12:45:10",
+    "input_type": "url",
+    "content": "http://secure-login.paypa1-checkpoint.net/verify?token=ab239c8192830192830192",
+    "risk_score": 92,
+    "severity": "CRITICAL",
+    "confidence": 98,
+    "classification_title": "Brand Impersonation & Typosquatting",
+    "signals": [
+      {
+        "label": "Typosquatted Brand Lookalike (paypal)",
+        "severity": "CRITICAL",
+        "detail": "Domain 'paypa1-checkpoint.net' uses character substitution '1' to mimic authentic PayPal."
+      },
+      {
+        "label": "Excessive Subdomains",
+        "severity": "HIGH",
+        "detail": "Domain contains 2 nested subdomains to obfuscate the real target authority."
+      },
+      {
+        "label": "Missing HTTPS Encryption",
+        "severity": "MEDIUM",
+        "detail": "Connection is unencrypted (plain HTTP), allowing credential interception in transit."
+      },
+      {
+        "label": "Suspicious Query Parameters",
+        "severity": "MEDIUM",
+        "detail": "Contains lengthy session hijacking redirect tokens."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 90,
+      "url_pattern": 85,
+      "social_engineering": 65,
+      "credential_request": 80
+    },
+    "url_segments": {
+      "protocol": "http",
+      "subdomain": "secure-login",
+      "domain": "paypa1-checkpoint.net",
+      "path": "/verify",
+      "params": "token=ab239c8192830192830192"
+    },
+    "ai_explanation": "This URL is an active credential phishing site impersonating PayPal. It uses character replacement ('paypa1') and an unencrypted HTTP connection to deceive users into disclosing authentication credentials.",
+    "recommended_action": [
+      "Do not click this link or enter any PayPal credentials.",
+      "Navigate directly to paypal.com through a secure, bookmarked browser session.",
+      "Report the abusive domain to PayPal anti-phishing (spoof@paypal.com)."
+    ]
+  },
+  {
+    "id": "SCN-84192",
+    "timestamp": "2026-08-29 11:20:44",
+    "input_type": "message",
+    "content": "URGENT: Your Chase bank account is temporarily suspended. Please enter your password and OTP immediately to verify your identity.",
+    "risk_score": 88,
+    "severity": "CRITICAL",
+    "confidence": 94,
+    "classification_title": "Smishing Credential Harvest",
+    "signals": [
+      {
+        "label": "Urgency & Panic Triggers",
+        "severity": "HIGH",
+        "detail": "High-pressure words ('URGENT', 'temporarily suspended') intended to bypass critical thinking."
+      },
+      {
+        "label": "Explicit Credential Harvest Request",
+        "severity": "CRITICAL",
+        "detail": "Explicitly requests private authentication data (password and one-time password OTP)."
+      }
+    ],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 95,
+      "credential_request": 90
+    },
+    "url_segments": null,
+    "ai_explanation": "This SMS or email uses artificial urgency claiming account suspension to coerce the recipient into revealing two-factor authentication tokens and banking passwords.",
+    "recommended_action": [
+      "Do not reply or click any links embedded in this message.",
+      "Banks will never ask for your one-time password (OTP) or password via text message.",
+      "Block the sender and verify your account status directly via the Chase mobile app."
+    ]
+  },
+  {
+    "id": "SCN-34102",
+    "timestamp": "2026-08-29 09:12:15",
+    "input_type": "url",
+    "content": "https://www.google.com/search?q=cybersecurity+threat+intel",
+    "risk_score": 12,
+    "severity": "LOW",
+    "confidence": 92,
+    "classification_title": "Benign Content Passed Clean",
+    "signals": [],
+    "breakdown": {
+      "domain_structure": 0,
+      "url_pattern": 0,
+      "social_engineering": 0,
+      "credential_request": 0
+    },
+    "url_segments": {
+      "protocol": "https",
+      "subdomain": "www",
+      "domain": "google.com",
+      "path": "/search",
+      "params": "q=cybersecurity+threat+intel"
+    },
+    "ai_explanation": "This URL directs to the legitimate Google search engine with valid SSL certificate verification and standard query parameters. No threat signals detected.",
+    "recommended_action": [
+      "No immediate malicious signatures identified.",
+      "Always verify SSL encryption status when entering credentials online."
+    ]
+  }
+]
