@@ -1,6 +1,8 @@
 import { type ScanItem, type ThreatChip, type UrlSegment, type LiveSignal } from "@/data/mockData"
 
-const API_BASE = "http://127.0.0.1:5000"
+const API_BASE =
+  (import.meta.env.VITE_API_BASE_URL || "").replace(/\/+$/, "") ||
+  (import.meta.env.DEV ? "http://127.0.0.1:5000" : "")
 
 export function mapBackendToScanItem(data: any): ScanItem {
   const riskScore = data.risk_score ?? 50

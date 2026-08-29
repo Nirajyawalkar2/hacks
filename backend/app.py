@@ -25,9 +25,11 @@ from models.scan_store import add_scan, get_all_scans, get_scan_by_id
 def create_app() -> Flask:
     app = Flask(__name__)
 
-    # Enable CORS for frontend dev server
-    cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
-    CORS(app, resources={r"/api/*": {"origins": cors_origins if cors_origins != ["*"] else "*"}}, supports_credentials=True)
+    # Enable CORS for frontend dev server and deployed origins
+    cors_env = os.getenv("CORS_ORIGINS", "*").strip()
+    cors_origins = [o.strip() for o in cors_env.split(",") if o.strip()]
+    origins_to_allow = "*" if ("*" in cors_origins or not cors_origins) else cors_origins
+    CORS(app, resources={r"/*": {"origins": origins_to_allow}}, supports_credentials=True)
 
     @app.route("/", methods=["GET"])
     def root():
